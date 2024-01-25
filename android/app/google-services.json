@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "488096575546",
+    "project_id": "platableapp",
+    "storage_bucket": "platableapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488096575546:android:863c635c0b7fcd3629c503",
+        "android_client_info": {
+          "package_name": "com.example.platableapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488096575546-vo3ck0h3ak683i9ndtl8t0km4ot8e727.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.platableapp",
+            "certificate_hash": "e1dff31c5fe5f830182b77d9e16347a4aa78efe6"
+          }
+        },
+        {
+          "client_id": "488096575546-a6eut4dp3kb8b2em9f2orb5agobcq881.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJBYY2uqnlHjrOrT3qOaM4UOtYYjojC84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488096575546-a6eut4dp3kb8b2em9f2orb5agobcq881.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
