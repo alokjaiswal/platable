@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:platableapp/Screens/LoginPage.dart';
+import 'package:platableapp/Screens/login_page.dart';
 import 'package:platableapp/services/authentication.dart';
 import 'package:platableapp/utils.dart';
 

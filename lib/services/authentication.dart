@@ -24,8 +24,6 @@ class Authentication {
 
     final GoogleSignInAccount? googleSignInAccount =
     await googleSignIn.signIn();
-    
-    print("googleSignInAccount $googleSignInAccount");
 
     if (googleSignInAccount != null) {
       final GoogleSignInAuthentication googleSignInAuthentication =
@@ -41,17 +39,11 @@ class Authentication {
         await auth.signInWithCredential(credential);
 
         user = userCredential.user;
-        print("user $user");
 
 
         if (user != null) {
-
-          print("inside search block");
-          print(user.uid);
           final PlatableUser? platableUser = await UserService().searchUser(user.uid);
-          print("platableUser $platableUser");
           if(platableUser == null && isSignUp) {
-            print("new user please signup");
             final userData = PlatableUser(
                 userName: user?.displayName,
                 userId: user.uid,
@@ -63,10 +55,8 @@ class Authentication {
             UserService().addUser(userData);
             doesUserExist = true;
           } else if(platableUser != null && !isSignUp) {
-            print("user exists");
             doesUserExist = true;
           } else if (platableUser != null && isSignUp) {
-            print("elseeeee condition");
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Account already exists, Please SignIn")));
           } else if (platableUser == null && !isSignUp) {
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Account not found, Please SignUp")));

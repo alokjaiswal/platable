@@ -26,15 +26,6 @@ class PlatableUser {
         email: (json?['email'] ?? "") as String,
         profileUrl: (json?['profileUrl'] ?? "") as String,
     );
-  //     : this(
-  //   userId: (json['userId']! as String),
-  //   phoneNumber: json['phoneNumber']! as String,
-  //   userName: json['userName']! as String,
-  //   email: json['email']! as String,
-  //   profileUrl: json['profileUrl']! as String,
-  // );
-
-
 
   Map<String, Object?> toJson() {
     return {

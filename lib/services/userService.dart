@@ -25,14 +25,8 @@ class UserService {
   Future<PlatableUser?> searchUser(String userId) async {
     PlatableUser? platableUser = null;
     try {
-    print("inside search aaapiiii $userId");
       final querySnapshot = await userCollectionRef.where(
           'userId', isEqualTo: userId).get();
-      print("querysnapshot new $querySnapshot");
-      // print(querySnapshot.docs.elementAt(0).data());
-      for (var docSnapshot in querySnapshot.docs) {
-        print('${docSnapshot.id} => ${docSnapshot.data()}');
-      }
 
       if (querySnapshot.docs.isNotEmpty) {
         // platableUser = PlatableUser.fromJson(querySnapshot.docs.elementAt(0).data())
@@ -40,28 +34,9 @@ class UserService {
         platableUser = snapshot.data() as PlatableUser?;
         // querySnapshot.docs.elementAt(0).data() as PlatableUser?;
       }
-
-      print("platable user is $platableUser");
     }catch(errr){
       print("error searching user $errr");
     }
     return platableUser;
   }
-
-  // static searchUsers() async {
-  //
-  //   print("in search users");
-  //
-  //   try {
-  //     final users = await .get(const GetOptions(
-  //       serverTimestampBehavior: ServerTimestampBehavior.previous,
-  //     ));
-  //
-  //     print("users are");
-  //     print(users.toString());
-  //   } catch(err) {
-  //     print("error getting users $err");
-  //   }
-  //
-  // }
 }
