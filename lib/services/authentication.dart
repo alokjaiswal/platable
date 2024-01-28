@@ -63,6 +63,10 @@ class Authentication {
           }
         }
 
+        if (!doesUserExist) {
+          FirebaseAuth.instance.signOut();
+        }
+
 
       } on FirebaseAuthException catch (e) {
         if (e.code == 'account-exists-with-different-credential') {
